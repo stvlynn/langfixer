@@ -19,16 +19,14 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
-    <h1 class="text-2xl font-bold mb-6 text-gray-800">Language Consistency Checker</h1>
-    
+  <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
     <div class="grid grid-cols-1 gap-4 mb-6">
       <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">Base Language</label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Base Language</label>
         <select
           v-model="lang"
           :disabled="disabled"
-          class="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+          class="block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
         >
           <option value="en-US">English</option>
           <option value="zh-Hans">Chinese</option>
@@ -37,12 +35,12 @@ const handleSubmit = () => {
       </div>
       
       <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">URL Suffix</label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">URL Suffix</label>
         <input
           type="text"
           v-model="url"
           :disabled="disabled"
-          class="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+          class="block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
           placeholder="Enter URL suffix"
         />
       </div>
@@ -50,7 +48,7 @@ const handleSubmit = () => {
       <button
         @click="handleSubmit"
         :disabled="disabled"
-        class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-blue-300 disabled:cursor-not-allowed"
+        class="w-full px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 dark:disabled:bg-blue-800 rounded-lg flex items-center justify-center gap-2"
       >
         {{ disabled ? 'Checking...' : 'Check Languages' }}
       </button>

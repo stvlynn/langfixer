@@ -1,5 +1,21 @@
-# Vue 3 + TypeScript + Vite
+# Language Consistency Checker
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A web app to check the consistency of text between multiple languages using [Dify.ai](https://dify.ai/).
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Features
+
+- Check the consistency of text between multiple languages.
+- Display the differences between the base language and other languages.
+- Apply changes to the base language to match the other languages.
+
+## Backend
+
+The backend uses the [Dify.ai](https://dify.ai/) API to check the consistency of text between multiple languages.
+
+Download the DSL [here](./LanguageConsistencyChecker.yml) and upload it to Dify.
+
+## License
+
+MIT License
+
+Copyright (c) 2024 [Steven Lynn](https://github.com/stvlynn)

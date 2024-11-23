@@ -1,7 +1,15 @@
 import axios, { AxiosError } from 'axios'
 
-const API_URL = 'https://api.dify.ai/v1/workflows/run'
-const API_KEY = 'app-EIqPf4SC8V2DUlD0JKtjnCAW'
+const getApiSettings = () => {
+  const apiKey = localStorage.getItem('apiKey')
+  const apiUrl = localStorage.getItem('apiUrl') || 'https://api.dify.ai/v1/workflows/run'
+  
+  if (!apiKey) {
+    throw new Error('API Key not found. Please configure it in Settings.')
+  }
+  
+  return { apiKey, apiUrl }
+}
 
 export interface CheckLanguagesResponse {
   cn: string
@@ -13,13 +21,15 @@ export type LanguageCode = 'zh-Hans' | 'en-US' | 'ja-JP'
 
 export const checkLanguages = async (lang: LanguageCode, url: string): Promise<CheckLanguagesResponse> => {
   try {
-    const response = await axios.post(API_URL, {
+    const { apiKey, apiUrl } = getApiSettings()
+    
+    const response = await axios.post(apiUrl, {
       inputs: { lang, url },
       response_mode: "blocking",
       user: "abc-123"
     }, {
       headers: {
-        'Authorization': `Bearer ${API_KEY}`,
+        'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
