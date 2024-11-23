@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios'
 
-const API_URL = 'http://2.56.166.37/v1/workflows/run'
-const API_KEY = 'app-IGIqqCgaSAQvyhwTwSeyyv5k'
+const API_URL = 'https://api.dify.ai/v1/workflows/run'
+const API_KEY = 'app-EIqPf4SC8V2DUlD0JKtjnCAW'
 
 export interface CheckLanguagesResponse {
   cn: string

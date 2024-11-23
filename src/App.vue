@@ -34,15 +34,15 @@ const handleSubmit = async ({ lang, url }: { lang: string; url: string }) => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-100 py-8 px-4">
-    <div class="max-w-4xl mx-auto">
+  <div class="min-h-screen bg-gray-100 py-6 px-3">
+    <div class="max-w-7xl mx-auto">
       <LanguageForm @submit="handleSubmit" :disabled="loading" />
       
       <div v-if="loading" class="text-center mb-6">
         <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
         <LanguageDisplay title="Chinese" :content="texts.cn" />
         <LanguageDisplay title="English" :content="texts.en" />
         <LanguageDisplay title="Japanese" :content="texts.jp" />
