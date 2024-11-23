@@ -2,6 +2,8 @@
 
 A web app to check the consistency of text between multiple languages using [Dify.ai](https://dify.ai/).
 
+![](https://cdn.statically.io/gh/stvlynn/cloudimg@master/blog/2310/截屏2024-11-24-01.46.40.5vq7pgfssuo0.webp)
+
 ## Features
 
 - Check the consistency of text between multiple languages.
